@@ -1,6 +1,6 @@
 @props(['chirp'])
 
-<div class="card bg-base-100">
+<div class="card bg-base-100 shadow">
     <div class="card-body">
         <div class="flex space-x-3">
             @if ($chirp->user)
@@ -31,7 +31,6 @@
                         @endif
                     </div>
 
-                    <!-- Replace the temporary @php block and $canEdit check with: -->
                     @can('update', $chirp)
                         <div class="flex gap-1">
                             <a href="/chirps/{{ $chirp->id }}/edit" class="btn btn-ghost btn-xs">
